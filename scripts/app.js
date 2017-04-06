@@ -10,7 +10,7 @@ $(document).on("ready", function() {
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 37.78, lng: -122.44},
-          zoom: 8
+          zoom: 1
         });
        
       }
@@ -34,11 +34,11 @@ $(document).on("ready", function() {
 
 	// declare variable for each string
 	var mag = quake.properties.mag;
-	var lat = quake.geometry.coordinates[0];
-	var lng = quake.geometry.coordinates[1];
+	var lat = quake.geometry.coordinates[1];
+	var lng = quake.geometry.coordinates[0];
 
 	// markers for our location in SF and all other cities with earthquake data
-	// must zoom out to see all markers!
+	
 	marker = new google.maps.Marker({
     map: map,
     position: {lat: lat, lng: lng}
